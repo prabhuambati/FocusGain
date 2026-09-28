@@ -1,0 +1,1 @@
+import { describe, expect, it } from 'vitest'; import { parseProviderJson } from '../src/classifier/parser'; it('rejects unsafe classification values before intervention decisions',()=>{expect(()=>parseProviderJson(JSON.stringify({classification:'<script>alert(1)</script>',confidence:1,category:'x',reason:'x'}))).toThrow();});
