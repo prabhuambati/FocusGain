@@ -87,6 +87,20 @@ The extension itself does not require a project `.env` file. Open IntelliBlock O
 5. Open the extension Options page, choose a provider, and save settings.
 6. Visit a YouTube video or Reddit post. The first decision may take a few seconds; later matching content can be served from local cache.
 
+## Chrome Web Store preparation
+
+This repository is prepared for a future Chrome Web Store submission but is not published from this repository automatically. The store-facing packet is documented in `STORE_LISTING.md`, and the privacy disclosure is in `PRIVACY_POLICY.md`.
+
+Build a clean upload archive with:
+
+```bash
+npm run package:store
+```
+
+The command builds `dist/`, validates the required manifest/icon files, rejects sensitive file patterns, and creates an ignored `intelliblock-v0.1.0-store.zip` whose root contains `manifest.json`. It does not upload or publish anything.
+
+Before submission, provide authentic screenshots from the installed extension, host the privacy policy at a stable public URL, complete Chrome Web Store data-use disclosures, and perform live manual testing with a configured provider. No accuracy, cost, latency, or productivity claims should be added without measured evidence.
+
 ## Testing and evaluation
 
 `npm test` covers parser validation, cache hit/expiry, routing, settings normalization, fallback-oriented safety, platform navigation guards, analytics calculations, metrics, and a classifier/cache integration flow.
