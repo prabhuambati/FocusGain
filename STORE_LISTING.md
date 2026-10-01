@@ -63,7 +63,12 @@ The final Chrome Web Store privacy disclosures must be completed in the Develope
 
 ## Assets still required before submission
 
-- Authentic screenshots from the installed extension's Options and Analytics pages.
-- An authentic screenshot of an intervention on supported content.
-- A stable public URL for `PRIVACY_POLICY.md` after replacing its contact placeholder.
+Capture these from the installed extension; do not use mockups or screenshots generated from source code:
+
+1. Options page showing the productivity goal, provider privacy warning, platform selection, and QA controls.
+2. Analytics dashboard showing local metrics and the truthful no-productivity-claims notice.
+3. A distracting-content intervention on a supported YouTube video or individual Reddit post.
+4. An uncertain-content intervention with the Continue anyway control visible, if enabled.
+
+A stable public URL for `PRIVACY_POLICY.md` is also required after replacing its contact placeholder.
 - Final review of the Chrome Web Store developer-program and data-use declarations.
