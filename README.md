@@ -103,7 +103,9 @@ Before submission, provide authentic screenshots from the installed extension, h
 
 ## Testing and evaluation
 
-`npm test` covers parser validation, cache hit/expiry, routing, settings normalization, fallback-oriented safety, platform navigation guards, analytics calculations, metrics, and a classifier/cache integration flow.
+`npm test` covers parser validation, cache hit/expiry, routing, settings normalization, offline QA safety, fallback-oriented behavior, platform navigation guards, analytics calculations, metrics, and a classifier/cache integration flow. The current repository run passes 19 tests across 12 test files.
+
+GitHub Actions runs typecheck, the full test suite, and the production build on pushes and pull requests. The workflow does not require provider credentials and does not run the paid real-provider evaluation.
 
 The repository includes 12 labeled examples in `src/evaluation/dataset.ts`, kept separate from production events. Run a real-provider evaluation only when you intentionally want to incur provider usage:
 
@@ -126,6 +128,16 @@ src/
   background.ts          MV3 service worker and message flow
   content.ts            debounced extraction, navigation, intervention UI
   classifier/            parser, router, orchestration
+  providers/             OpenAI and Anthropic adapters
+  cache/                 normalized fingerprint and TTL cache
+  analytics/             local event recording and derived metrics
+  platforms/             YouTube and Reddit extraction/navigation
+  options/               settings UI
+  dashboard/             local analytics UI
+  evaluation/            labeled dataset, metrics, real-provider runner
+tests/                    unit and integration-style tests
+```
+        parser, router, orchestration
   providers/             OpenAI and Anthropic adapters
   cache/                 normalized fingerprint and TTL cache
   analytics/             local event recording and derived metrics
