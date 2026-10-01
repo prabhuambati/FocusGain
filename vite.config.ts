@@ -3,7 +3,6 @@ import { resolve } from 'node:path';
 
 export default defineConfig({
   root: process.cwd(),
-  css: { postcss: {} },
   build: {
     outDir: 'dist',
     emptyOutDir: true,
