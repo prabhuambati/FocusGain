@@ -35,6 +35,8 @@
 - [ ] Test missing-key, timeout, rate-limit, invalid-output, and provider-error fallbacks.
 - [ ] Test cache reuse and expiration.
 - [ ] Test the dashboard and clear-data control.
+- [ ] Enable offline QA mode and verify productive, distracting, and uncertain UI scenarios without a provider request.
+- [ ] Enable diagnostics and verify recent event metadata appears locally without page text or API keys.
 - [ ] Test Continue anyway and verify the local override event.
 
 ## Submission boundary
