@@ -10,7 +10,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "evaluate": "tsx evaluation/run.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "package:store": "npm run build && node scripts/package-store.mjs"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.270",
